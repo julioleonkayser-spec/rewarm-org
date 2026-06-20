@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A0A0A;
+  color: #FAFAFA;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #F97316 0%, #FCD34D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.3), 0 0 80px rgba(249, 115, 22, 0.1);
+  }
+
+  .card-surface {
+    background: #111111;
+    border: 1px solid #1F1F1F;
+  }
+
+  .card-featured {
+    background: #111111;
+    border: 1px solid rgba(249, 115, 22, 0.35);
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.10), inset 0 0 40px rgba(249, 115, 22, 0.03);
+  }
+
+  .hero-mesh {
+    background:
+      radial-gradient(ellipse 70% 55% at 5% 65%, rgba(249, 115, 22, 0.12) 0%, transparent 100%),
+      radial-gradient(ellipse 55% 45% at 92% 18%, rgba(139, 92, 246, 0.08) 0%, transparent 100%),
+      radial-gradient(ellipse 45% 35% at 55% 95%, rgba(249, 115, 22, 0.05) 0%, transparent 100%),
+      #0A0A0A;
+  }
+
+  .cta-gradient {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 50%, rgba(249, 115, 22, 0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 15% 85%, rgba(139, 92, 246, 0.04) 0%, transparent 60%),
+      #0A0A0A;
+  }
+
+  .badge-mono {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .btn-orange {
+    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    transition: opacity 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-orange:hover {
+    opacity: 0.92;
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.45), 0 8px 24px rgba(249, 115, 22, 0.25);
+  }
+
+  /* Pricing card inner border light sweep — CSS only */
+  .card-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-sweep::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 35%,
+      rgba(249, 115, 22, 0.07) 50%,
+      transparent 65%
+    );
+    transform: translateX(-110%);
+    transition: transform 0.55s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .card-sweep:hover::before {
+    transform: translateX(110%);
+  }
+  .card-sweep > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Nav link underline draws in from left */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.25s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* CTA arrow shifts 4px right on hover */
+  .btn-arrow .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  .btn-arrow:hover .arrow {
+    transform: translateX(4px);
+  }
+}
+
+/* Range input — cross-browser thumb styling */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #F97316;
+  border: 2px solid #0A0A0A;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+  transition: box-shadow 0.15s ease;
+}
+input[type='range']::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.25);
+}
+input[type='range']::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #F97316;
+  border: 2px solid #0A0A0A;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+}
+
+/* Smooth float animations for hero glows */
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-20px) translateX(10px); }
+  66% { transform: translateY(10px) translateX(-15px); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(15px) translateX(-10px); }
+}
+.animate-float1 { animation: float1 12s ease-in-out infinite; }
+.animate-float2 { animation: float2 16s ease-in-out infinite; }
