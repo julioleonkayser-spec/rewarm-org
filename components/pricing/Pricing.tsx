@@ -18,8 +18,8 @@ const plans = [
     leads: '100 leads / month',
     features: BASE_FEATURES,
     proAddons: [] as string[],
-    cta: 'Get Starter',
-    href: '#buy-starter',
+    cta: 'Start Starter Plan',
+    href: 'https://www.paypal.com/ncp/payment/5D5E57YJH3HLG',
     featured: false,
   },
   {
@@ -28,8 +28,8 @@ const plans = [
     leads: '300 leads / month',
     features: BASE_FEATURES,
     proAddons: [] as string[],
-    cta: 'Get Growth',
-    href: '#buy-growth',
+    cta: 'Start Growth Plan',
+    href: 'https://www.paypal.com/ncp/payment/PVVBG5JWTX92Q',
     featured: true,
   },
   {
@@ -38,8 +38,8 @@ const plans = [
     leads: '600 leads / month',
     features: BASE_FEATURES,
     proAddons: ['Dedicated onboarding call', 'Custom agent setup'],
-    cta: 'Get Pro',
-    href: '#buy-pro',
+    cta: 'Start Pro Plan',
+    href: 'https://www.paypal.com/ncp/payment/DDHFGGG3DXSUN',
     featured: false,
   },
 ]
@@ -60,6 +60,9 @@ export default function Pricing() {
         </h2>
         <p className="text-[#71717A] text-lg max-w-md mx-auto">
           No contracts. No setup fees. Cancel anytime.
+        </p>
+        <p className="text-[#A1A1AA] text-sm max-w-sm mx-auto mt-4 tracking-wide">
+          Founding client pricing — 50% off standard rates for a limited number of early clients.
         </p>
       </motion.div>
 
@@ -130,6 +133,8 @@ export default function Pricing() {
 
             <a
               href={plan.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`btn-arrow w-full text-center py-3.5 rounded-xl font-bold text-sm transition-colors inline-flex items-center justify-center gap-2 ${
                 plan.featured
                   ? 'btn-orange text-white'
