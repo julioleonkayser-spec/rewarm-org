@@ -71,7 +71,7 @@ export default function AudioDemo() {
       >
         <span className="badge-mono text-orange-400 inline-block mb-5">HEAR IT IN ACTION</span>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-5">
-          Real calls. Real results.
+          Listen to real reactivation calls
         </h2>
         <p className="text-[#71717A] text-lg max-w-md mx-auto">
           The AI handles the conversation. You only pick up when there&apos;s a qualified buyer.

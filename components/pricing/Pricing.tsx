@@ -56,7 +56,7 @@ export default function Pricing() {
       >
         <span className="badge-mono text-orange-400 inline-block mb-5">PRICING</span>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-5">
-          Pick your plan.
+          Access the ReWarm system.
         </h2>
         <p className="text-[#71717A] text-lg max-w-md mx-auto">
           No contracts. No setup fees. Cancel anytime.
@@ -155,8 +155,8 @@ export default function Pricing() {
         className="text-center mt-10 space-y-3"
       >
         <p className="text-[#52525B] text-sm max-w-lg mx-auto leading-relaxed">
-          All plans include setup, the AI agent, and your client portal.
-          Onboarding within 48 hours of purchase.
+          Every plan includes the full ReWarm system: AI reactivation agent, HOT / WARM / COLD
+          classification, live transfers, and your client portal. Onboarding within 48 hours.
         </p>
       </motion.div>
     </section>

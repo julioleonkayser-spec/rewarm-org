@@ -57,21 +57,21 @@ export default function Results() {
         transition={{ duration: 0.6 }}
         className="text-center mb-6"
       >
-        <span className="badge-mono text-orange-400 inline-block mb-4">REAL NUMBERS</span>
+        <span className="badge-mono text-orange-400 inline-block mb-4">WHAT THE SYSTEM DELIVERS</span>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-4">
-          One agent. One dead list. What happened.
+          One system. One dormant database. Here&apos;s what changes.
         </h2>
         <p className="text-[#71717A] text-lg max-w-xl mx-auto">
-          Running ReWarm through 500 cold real estate leads:
+          Running ReWarm on a dormant contact database of 500 real estate leads:
         </p>
       </motion.div>
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-14">
-        <MetricCard animate target={12} suffix="%" label="Recovery Rate" desc="Industry avg cold-call rate is 1–2%" />
+        <MetricCard value="ONE" animate={false} label="Unified Operating System" desc="Reactivate, qualify, transfer, and track — integrated in one client portal" />
         <MetricCard value="90s" animate={false} label="Avg Qualification Time" desc="Per lead, per call, automated" />
         <MetricCard value="24/7" animate={false} label="Always Dialing" desc="Never takes a day off, never burns out" />
         <MetricCard value="48h" animate={false} label="Time to First Hot Transfer" desc="From list upload to live call on your phone" />
-        <MetricCard animate target={0} suffix="" label="Extra Ad Spend Required" desc="Works the list you already paid for" />
+        <MetricCard value="$0" animate={false} label="New Ad Budget Needed" desc="Works the list you already paid for" />
         <MetricCard animate target={90} suffix="%" label="Reduction in Manual Dialing" desc="Only pick up for pre-qualified leads" />
       </div>
     </section>

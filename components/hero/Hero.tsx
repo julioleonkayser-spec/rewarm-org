@@ -41,19 +41,21 @@ export default function Hero() {
         <motion.div variants={item} className="flex justify-center mb-10">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/25 bg-orange-500/5 badge-mono text-orange-400">
             <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
-            AI VOICE AGENT FOR REAL ESTATE
+            REAL ESTATE REACTIVATION OPERATING SYSTEM
           </span>
         </motion.div>
 
-        {/* Headline — Inter black + Fraunces italic for "money." */}
+        {/* Headline */}
         <motion.h1
           variants={item}
           className="font-black leading-[0.9] tracking-[-0.04em] mb-8"
-          style={{ fontSize: 'clamp(54px, 8vw, 92px)' }}
+          style={{ fontSize: 'clamp(44px, 6.5vw, 80px)' }}
         >
-          Your dead leads
+          Recover dormant pipeline,
           <br />
-          are still worth
+          control outcomes, and turn
+          <br />
+          your old database into an
           <br />
           <em
             className="text-gradient-orange not-italic"
@@ -63,7 +65,7 @@ export default function Hero() {
               fontWeight: 700,
             }}
           >
-            money.
+            operating asset.
           </em>
         </motion.h1>
 
@@ -73,8 +75,9 @@ export default function Hero() {
           className="max-w-xl mx-auto text-[#71717A] leading-relaxed mb-12"
           style={{ fontSize: 'clamp(17px, 1.8vw, 19px)' }}
         >
-          ReWarm calls every cold lead automatically, qualifies them in 90 seconds, and
-          live-transfers the hot ones straight to your phone.
+          ReWarm reactivates old real estate leads, qualifies interest automatically,
+          routes the best opportunities to your team, and gives you full visibility
+          through one client portal.
         </motion.p>
 
         {/* CTA */}
@@ -86,14 +89,14 @@ export default function Hero() {
             href="#pricing"
             className="btn-arrow btn-orange inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-bold text-base"
           >
-            Start reactivating <span className="arrow">→</span>
+            Start reactivating your database <span className="arrow">→</span>
           </a>
         </motion.div>
 
         {/* Stats */}
         <motion.div variants={item} className="flex flex-wrap justify-center gap-3">
           {[
-            '12% recovery rate',
+            'Zero new ad spend',
             '90s to qualify',
             '48hrs to first transfer',
           ].map((stat) => (

@@ -31,12 +31,13 @@ export default function DashboardPreview() {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <span className="badge-mono text-orange-400 inline-block mb-4">YOUR COMMAND CENTER</span>
+        <span className="badge-mono text-orange-400 inline-block mb-4">THE CLIENT PORTAL</span>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-4">
-          See every lead. Know every outcome.
+          Full pipeline visibility. Total operational control.
         </h2>
         <p className="text-[#71717A] text-lg max-w-xl mx-auto">
-          Your ReWarm portal updates in real time after every call.
+          ReWarm is not just an AI caller. It is an operating system your team can actually
+          manage — from a single portal that updates in real time after every call.
         </p>
       </motion.div>
 
@@ -210,6 +211,31 @@ export default function DashboardPreview() {
             </div>
           </div>
         </div>
+      </motion.div>
+
+      {/* Portal capability chips */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="max-w-3xl mx-auto mt-8 flex flex-wrap justify-center gap-3"
+      >
+        {[
+          'View performance',
+          'Inspect lead outcomes',
+          'Pause or activate campaigns',
+          'Add notes per lead',
+          'Full pipeline visibility',
+        ].map((cap) => (
+          <div
+            key={cap}
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.07]"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-500 flex-shrink-0" />
+            <span className="font-mono text-sm text-[#71717A]">{cap}</span>
+          </div>
+        ))}
       </motion.div>
     </section>
   )

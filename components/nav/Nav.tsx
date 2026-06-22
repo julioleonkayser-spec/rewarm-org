@@ -72,7 +72,7 @@ export default function Nav() {
             href="#pricing"
             className="btn-arrow inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full btn-orange text-white text-sm font-semibold"
           >
-            Get Started <span className="arrow">→</span>
+            Start reactivating your database <span className="arrow">→</span>
           </a>
         </nav>
 
@@ -123,7 +123,7 @@ export default function Nav() {
                 className="btn-arrow btn-orange inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-full text-white font-semibold"
                 onClick={() => setMenuOpen(false)}
               >
-                Get Started <span className="arrow">→</span>
+                Start reactivating your database <span className="arrow">→</span>
               </a>
             </div>
           </motion.div>
